@@ -1,0 +1,268 @@
+/* ids are unique. classes are not unique */
+
+body {
+  background-color: #fff;
+  width: 99vw;
+  height: 97vh;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+#main-footer a {
+  color: #5f6368;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul li {
+  float: left;
+  margin: 10px;
+}
+
+#viewport {
+  /* this is whole screen area */
+  top: 0;
+  min-height: 100%;
+  position: absolute;
+}
+
+#navbar {
+  /* top navigation area */
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* margin: 7px 0 0 10px; */
+  background-color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#top-left {
+  /* top left of screen. "About" and "Store" text */
+  /* display: inline-block; */
+  display: flex;
+  flex-direction: row;
+  padding-right: 30px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  float: left;
+}
+
+#top-right {
+  /* top left of screen. "gmail", "images", "grid for other apps" and "sign-in button" */
+  /* display: inline-block; */
+  display: flex;
+  flex-direction: row;
+  padding-right: 2px;
+  margin-top: 10px;
+  margin-right: 40px;
+  align-items: center;
+  justify-content: flex-end;
+  float: right;
+}
+
+#app-icon {
+  height: 30px;
+  position: relative;
+  top: -8px;
+  cursor: pointer;
+}
+
+#app-icon:hover {
+  /* box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28); */
+  /* border-color: rgba(223, 225, 229, 0); */
+  transform: scale(1.05);
+}
+
+#sign-in {
+  display: inline-block;
+  border: 1px solid #4285f4;
+  border-radius: 3px;
+  /* background-color: #4387fd; */
+  background-image: linear-gradient(#4387fd, #4683ea);
+  color: #fff;
+  padding: 0 12px;
+  font-weight: bold;
+  line-height: 28px;
+  margin-top: -10px;
+  cursor: pointer;
+  padding: 0 12px;
+}
+
+#sign-in:hover {
+  transform: scale(1.01);
+}
+
+.search-zone {
+  /* whole area based around the search. This includes the "logo", "submit buttons" and "search box" */
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 233px;
+  margin-top: 90px;
+  width: 100%;
+  max-width: 100vw;
+}
+
+#logo {
+  /* google logo in centre of screen */
+  display: flex;
+  justify-content: center;
+  padding-top: 109px;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+#search-box {
+  background: #fff;
+  display: flex;
+  border: 1px solid #dfe1e5;
+  border-top-color: rgb(223, 225, 229);
+  border-right-color: rgb(223, 225, 229);
+  border-bottom-color: rgb(223, 225, 229);
+  border-left-color: rgb(223, 225, 229);
+  box-shadow: none;
+  border-radius: 24px;
+  z-index: 3;
+  height: 44px;
+  margin: 0 auto;
+  width: 482px;
+}
+
+#search-box:hover {
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
+}
+
+#search-bar {
+  /* formatting for the search box */
+  background-color: transparent;
+  border: none;
+  border-radius: 24px;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.87);
+  word-wrap: break-word;
+  outline: none;
+  display: block;
+  flex: 100%;
+  tap-highlight-color: transparent;
+  margin-top: 5px;
+  padding: 15px;
+  height: 34px;
+  font-size: 16px;
+}
+
+.button {
+  /* formatting for the search buttons below the search bar. "search" and "i'm feeling lucky"*/
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  color: #5f6368;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  float: left;
+}
+
+.button:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+  color: #222;
+  border: 1px solid #c6c6c6;
+}
+
+#country-footer {
+  /* footer for the country being searched within */
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  /* margin: 7px 0 0 10px; */
+  /* margin-left: 30px; */
+  background-color: #f2f2f2;
+  color: rgba(0, 0, 0, 0.54);
+  /* background-color: greenyellow; */
+  /* padding-left: 15px; */
+  padding-right: 15px;
+  line-height: 40px;
+  bottom: 50px;
+  margin-left: -7px;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  font-size: 15px;
+  font-weight: lighter;
+  /* left: 4px; */
+}
+
+#main-footer {
+  /* main footer with text inside */
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  /* margin: 4px; */
+  background-color: #f2f2f2;
+  color: #5f6368;
+  /* background-color: red; */
+  /* padding-top: 10px; */
+  /* padding-left: 15px; */
+  /* padding-right: 15px; */
+  line-height: 35px;
+  margin-left: -7px;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+#bottom-left {
+  /* bottom left of screen. "Advertising", "Business" and "How search works" */
+  display: flex;
+  flex-direction: row;
+  padding-right: 30px;
+  margin-top: 0;
+  align-items: center;
+  justify-content: flex-start;
+  float: left;
+}
+
+#bottom-right {
+  /* bottom right of screen. "Privacy", "Terms", "Settings" */
+  display: flex;
+  flex-direction: row;
+  padding-right: 30px;
+  margin-top: 0;
+  align-items: center;
+  justify-content: flex-end;
+  float: right;
+}
